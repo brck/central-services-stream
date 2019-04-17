@@ -37,6 +37,7 @@ const Logger = require('@mojaloop/central-services-shared').Logger
 
 const testConsumer = async () => {
   console.log('Instantiate consumer')
+  const kafkaBrokers = process.env.KAFKA_BROKER_LIST
   let c = new Consumer(['test'], {
     options: {
       mode: ConsumerEnums.CONSUMER_MODES.recursive,
@@ -49,7 +50,7 @@ const testConsumer = async () => {
     },
     rdkafkaConf: {
       'group.id': 'kafka',
-      'metadata.broker.list': 'localhost:9092',
+      'metadata.broker.list': kafkaBrokers,
       'enable.auto.commit': false
     },
     topicConf: {},

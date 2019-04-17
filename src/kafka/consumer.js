@@ -36,7 +36,7 @@
  */
 
 'use strict'
-
+const kafkaBrokers = process.env.KAFKA_BROKER_LIST
 const Promise = require('bluebird')
 const EventEmitter = require('events')
 const async = require('async')
@@ -164,7 +164,7 @@ exports.ENUMS = ENUMS
  * let consumer = new Consumer(['test1'], {
  *   rdkafka: {
  *     'group.id': 'kafka',
- *     'metadata.broker.list': 'localhost:9092',
+ *     'metadata.broker.list': kafkaBrokers,
  *     'enable.auto.commit': false
  *   },
  *   options: {

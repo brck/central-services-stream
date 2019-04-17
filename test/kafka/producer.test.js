@@ -33,7 +33,7 @@
  * Kafka Producer
  * @module Producer
  */
-
+const kafkaBrokers = process.env.KAFKA_BROKER_LIST
 const Test = require('tapes')(require('tape'))
 const Producer = require('../../src/kafka').Producer
 // const ProducerEnums = require('../../src/kafka').Producer.ENUMS
@@ -55,7 +55,7 @@ Test('Producer test', (producerTests) => {
         messageCharset: 'utf8'
       },
       rdkafkaConf: {
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'client.id': 'default-client',
         'event_cb': true,
         'compression.codec': 'none',
@@ -241,7 +241,7 @@ Test('Producer test for KafkaProducer events', (producerTests) => {
         messageCharset: 'utf8'
       },
       rdkafkaConf: {
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'client.id': 'default-client',
         'event_cb': true,
         'compression.codec': 'none',

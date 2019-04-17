@@ -155,8 +155,9 @@ class Producer extends EventEmitter {
       }
     }
     if (!config.rdkafkaConf) {
+      const kafkaBrokers = process.env.KAFKA_BROKER_LIST
       config.rdkafkaConf = {
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'client.id': 'default-client',
         'event_cb': true,
         'compression.codec': 'none',

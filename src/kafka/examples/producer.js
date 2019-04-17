@@ -42,6 +42,7 @@ const Logger = require('@mojaloop/central-services-shared').Logger
 
 let testProducer = async () => {
   Logger.info('testProducer::start')
+  const kafkaBrokers = process.env.KAFKA_BROKER_LIST
 
   const config = {
     options:
@@ -50,7 +51,7 @@ let testProducer = async () => {
       messageCharset: 'utf8'
     },
     rdkafkaConf: {
-      'metadata.broker.list': 'localhost:9092',
+      'metadata.broker.list': kafkaBrokers,
       'client.id': 'default-client',
       'event_cb': true,
       'compression.codec': 'none',

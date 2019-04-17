@@ -36,7 +36,7 @@
  */
 
 'use strict'
-
+const kafkaBrokers = process.env.KAFKA_BROKER_LIST
 const Test = require('tapes')(require('tape'))
 const Consumer = require('../../src/kafka').Consumer
 const ConsumerEnums = require('../../src/kafka').Consumer.ENUMS
@@ -71,7 +71,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -368,7 +368,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -433,7 +433,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -503,7 +503,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -568,7 +568,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -632,7 +632,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -735,7 +735,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -838,7 +838,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -923,7 +923,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1008,7 +1008,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1093,7 +1093,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1178,7 +1178,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1262,7 +1262,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1346,7 +1346,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1431,7 +1431,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1514,7 +1514,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1605,7 +1605,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1698,7 +1698,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1733,7 +1733,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1809,7 +1809,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1885,7 +1885,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1921,7 +1921,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -1986,7 +1986,7 @@ Test('Consumer test', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
@@ -2083,7 +2083,7 @@ Test('Consumer test for KafkaConsumer events', (consumerTests) => {
       },
       rdkafkaConf: {
         'group.id': 'kafka-test',
-        'metadata.broker.list': 'localhost:9092',
+        'metadata.broker.list': kafkaBrokers,
         'enable.auto.commit': false
       },
       topicConf: {},
